@@ -1,12 +1,23 @@
+from _init_ import Disciplina
+
 class Curso:
     # Representa um curso oferecido por um campus
     def __init__(self, nome, duracao_semestres):
         self.nome = nome
-        self.duracao_semestres = duracao_semestres
+
+        try:
+            self.duracao_semestres = int(duracao_semestres)
+        except ValueError:
+            print("Aviso: Duração inválida fornecida. Definindo como 0.")
+            self.duracao_semestres = 0
+
         self.disciplinas = [] # Lista para armazenar disciplinas do curso
 
     def adicionar_disciplina(self, disciplina):
-        self.disciplinas.append(disciplina)
+        if isinstance(disciplina, Disciplina):
+            self.disciplinas.append(disciplina)
+        else:
+            print("Erro: Objeto inválido. Esperado uma Disciplina.")
 
     def __str__(self):
         # Mostra o curso e lista suas disciplinas

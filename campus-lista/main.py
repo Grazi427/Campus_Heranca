@@ -23,8 +23,43 @@ def exibir_menu():
     print("0. Sair")
     print("="*40)
 
+def inicializar_dado():
+    #  Inicialização com dados de exemplo (opcional)
+    print("\n" + "="*40)
+    resp = input('Deseja inicializar com exemplos? (s/n): ').strip().lower()
+
+    if resp == 's':
+        print("\n" + "="*40)
+        c1 = Campus("Pici", "Av. Univ")
+        c2 = Campus("Benfica", "Av. Carapinima")
+        
+        curso_dir = Curso("Direito", 10)
+        curso_dir.adicionar_disciplina(Disciplina("Direito Civil I", 64))
+        curso_dir.adicionar_disciplina(Disciplina("Direito Romano", 32))
+        
+        curso_ti = Curso("Eng. Software", 8)
+        curso_ti.adicionar_disciplina(Disciplina("Algoritmos", 96))
+        curso_ti.adicionar_disciplina(Disciplina("POO", 64))
+
+        c1.adicionar_curso(curso_dir)
+        c2.adicionar_curso(curso_ti)
+        
+        campus_list.extend([c1, c2])
+        
+        # Adicionando optativas globais de exemplo
+        disc_optativas.append(DisciplinaOptativa("Libras", 64))
+        disc_optativas.append(DisciplinaOptativa("Empreendedorismo", 32))
+
+    elif resp == 'n':
+        print("\n" + "="*40)
+        print('Sistema iniciado vazio.')
+
 def main():
     # Função principal que executa o menu
+    inicializar_dado()
+
+    while True:
+
         exibir_menu()
         escolha = input("Escolha uma opção: ").strip()
         
@@ -51,40 +86,8 @@ def main():
             return exit()
         else:
             print("Opção inválida. Por favor, tente novamente.")
-        main()
+            main()
 
+if __name__ == "__main__":
+    main()
 
-
-#  Inicialização com dados de exemplo (opcional)
-
-print("\n" + "="*40)
-resp = input('Deseja inicializar com exemplos? (s/n): ').strip().lower()
-
-if resp == 's':
-    print("\n" + "="*40)
-    c1 = Campus("Pici", "Av. Univ")
-    c2 = Campus("Benfica", "Av. Carapinima")
-    
-    curso_dir = Curso("Direito", 10)
-    curso_dir.adicionar_disciplina(Disciplina("Direito Civil I", 64))
-    curso_dir.adicionar_disciplina(Disciplina("Direito Romano", 32))
-    
-    curso_ti = Curso("Eng. Software", 8)
-    curso_ti.adicionar_disciplina(Disciplina("Algoritmos", 96))
-    curso_ti.adicionar_disciplina(Disciplina("POO", 64))
-
-    c1.adicionar_curso(curso_dir)
-    c2.adicionar_curso(curso_ti)
-    
-    campus_list.extend([c1, c2])
-    
-    # Adicionando optativas globais de exemplo
-    disc_optativas.append(DisciplinaOptativa("Libras", 64))
-    disc_optativas.append(DisciplinaOptativa("Empreendedorismo", 32))
-
-elif resp == 'n':
-    print("\n" + "="*40)
-    print('Sistema iniciado vazio.')
-
-
-main()

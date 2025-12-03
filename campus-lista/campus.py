@@ -1,9 +1,11 @@
+from _init_ import Curso
+
 campus_list = []
 class Campus:
     # Representa um campus da universidade com seus cursos
     def __init__(self, nome, endereco):
-        self.nome = nome
-        self.endereco = endereco
+        self.nome = str(nome)
+        self.endereco = str(endereco)
         self.cursos = []
         
     def encontrar_curso(self, nome_curso):
@@ -15,7 +17,12 @@ class Campus:
 
     def adicionar_curso(self, curso):
         # Adiciona um objeto Curso à lista de cursos
-        self.cursos.append(curso)
+        if isinstance(curso,Curso):
+            self.cursos.append(curso)
+            return True
+        else:
+            print(f"Erro: O objeto '{curso}' não é um Curso válido.")
+            return False
 
     def remover_curso(self, nome_curso):
         # Remove um curso pelo nome, iterando pela lista

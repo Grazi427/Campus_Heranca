@@ -71,7 +71,7 @@ def excluir_campus():
     if not campus_list:
         return
         
-    print("\n+"-"*15, Excluir Campus "+"-"*15)
+    print("\n" + "-"*15 + " Excluir Campus " + "-"*15)
     nome = input("Digite o nome do Campus que deseja EXCLUIR: ").strip()
     
     campus_para_excluir = encontrar_campus(nome)
