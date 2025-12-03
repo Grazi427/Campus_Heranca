@@ -1,6 +1,6 @@
 # Sistema de Gestão Universitária - Campus Herança
 
-Este projeto é um sistema simples de **Gestão Universitária** desenvolvido em **Python**. Ele aplica conceitos de Programação Orientada a Objetos (POO), incluindo classes, associações e herança, para gerenciar Campus, Cursos e Disciplinas. ( Esse código foi varificado e sofreu alterações sugeridas pelo Grmini 3.0 )
+Este projeto é um sistema simples de **Gestão Universitária** desenvolvido em **Python**. Ele aplica conceitos de Programação Orientada a Objetos (POO), incluindo classes, associações e herança, para gerenciar Campus, Cursos e Disciplinas. ( Esse código foi varificado e sofreu alterações sugeridas pelo Gemini 3.0 )
 
 ## 📋 Funcionalidades
 
