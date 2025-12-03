@@ -58,35 +58,33 @@ def main():
     # Função principal que executa o menu
     inicializar_dado()
 
-    while True:
-
-        exibir_menu()
-        escolha = input("Escolha uma opção: ").strip()
+    exibir_menu()
+    escolha = input("Escolha uma opção: ").strip()
         
-        if escolha == '1':
-            adicionar_campus()
-        elif escolha == '2':
-            visualizar_campus()
-        elif escolha == '3':
-            editar_campus()
-        elif escolha == '4':
-            excluir_campus()
-        elif escolha == '5':
-            adicionar_curso()
-        elif escolha == '6':
-            editar_curso()
-        elif escolha == '7':
-            excluir_curso()
-        elif escolha == '8':
-            adicionar_disciplina_regular()
-        elif escolha == '9':
-            gerenciar_optativas()
-        elif escolha == '0':
-            print("Obrigado por usar o sistema! Encerrando...")
-            return exit()
-        else:
-            print("Opção inválida. Por favor, tente novamente.")
-            main()
+    if escolha == '1':
+        adicionar_campus()
+    elif escolha == '2':
+        visualizar_campus()
+    elif escolha == '3':
+        editar_campus()
+    elif escolha == '4':
+        excluir_campus()
+    elif escolha == '5':
+        adicionar_curso()
+    elif escolha == '6':
+        editar_curso()
+    elif escolha == '7':
+        excluir_curso()
+    elif escolha == '8':
+        adicionar_disciplina_regular()
+    elif escolha == '9':
+        gerenciar_optativas()
+    elif escolha == '0':
+        print("Obrigado por usar o sistema! Encerrando...")
+        return exit()
+    else:
+        print("Opção inválida. Por favor, tente novamente.")
+        main()
 
 if __name__ == "__main__":
     main()
