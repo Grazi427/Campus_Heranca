@@ -4,7 +4,7 @@ class Disciplina:
     # Representa uma disciplina vinculada a um curso específico
     def __init__(self, nome, carga_horaria):
         self.nome = nome
-        
+
         try:
             self.carga_horaria = int(carga_horaria)
         except ValueError:
@@ -23,7 +23,4 @@ class DisciplinaOptativa(Disciplina):
     
     def get_tipo(self):
         return 'Optativa'
-
-    def __str__(self):
-        return f"   -> [OPTATIVA]: {self.nome} | CH: {self.carga_horaria}h"
 
