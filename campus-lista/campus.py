@@ -1,4 +1,4 @@
-from _init_ import Curso
+from cursos import Curso
 
 campus_list = []
 class Campus:

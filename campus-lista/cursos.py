@@ -1,4 +1,4 @@
-from _init_ import Disciplina
+from disciplinas import Disciplina
 
 class Curso:
     # Representa um curso oferecido por um campus

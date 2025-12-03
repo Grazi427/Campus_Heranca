@@ -1,7 +1,7 @@
 from crud import adicionar_campus,excluir_campus,editar_campus,visualizar_campus,adicionar_curso,editar_curso,excluir_curso,adicionar_disciplina_regular,gerenciar_optativas
-from campus import campus_list
-from disciplinas import disc_optativas
-from _init_ import Campus,Curso,Disciplina,DisciplinaOptativa
+from campus import campus_list,Campus
+from disciplinas import disc_optativas,Disciplina,DisciplinaOptativa
+from cursos import Curso
 
 def exibir_menu():
     # Exibe o menu de opções

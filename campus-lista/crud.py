@@ -1,6 +1,6 @@
-from campus import campus_list
-from disciplinas import disc_optativas
-from _init_ import Campus,Curso,DisciplinaOptativa,Disciplina
+from campus import campus_list,Campus
+from disciplinas import disc_optativas,DisciplinaOptativa,Disciplina
+from cursos import Curso
 
 
 def encontrar_campus(nome_campus):
